@@ -1,0 +1,36 @@
+{
+  "name": "simple-logger",
+  "version": "0.0.1",
+  "description": "simple log framework for node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "keywords": [
+    "node",
+    "log"
+  ],
+  "author": "zhanggj",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "babel-cli": "^6.6.5",
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-add-module-exports": "^0.2.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.7.5",
+    "babel-polyfill": "^6.7.4",
+    "babel-preset-es2017": "^6.22.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "babel-preset-stage-3": "^6.5.0",
+    "babel-register": "^6.18.0",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb": "^9.0.0",
+    "eslint-plugin-babel": "^3.2.0",
+    "eslint-plugin-import": "^1.7.0",
+    "eslint-plugin-jsx-a11y": "^1.2.0",
+    "eslint-plugin-react": "^5.0.1"
+  }
+}

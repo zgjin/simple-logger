@@ -1,0 +1,13 @@
+{
+	"presets": ["es2017", "stage-0", "stage-1", "stage-2","stage-3"],
+	"plugins": [
+		"add-module-exports",
+		"transform-es2015-modules-commonjs",
+		["transform-runtime", {
+			"polyfill": false,
+			"regenerator": true
+		}]
+	],
+	"retainLines": true,
+  "ast": true
+}

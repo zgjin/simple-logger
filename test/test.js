@@ -7,6 +7,7 @@ test('test', async t => {
       type: 'basic'
     }
   });
+  logger.append({ requestId: 'requestId' });
   logger.setLevel('DEBUG');
   logger.debug('test-----');
   t.truthy(true);

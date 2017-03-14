@@ -7,8 +7,26 @@ test('test', async t => {
       type: 'basic'
     }
   });
-  logger.append({ requestId: 'requestId' });
+  // logger.append({ requestId: 'requestId' });
   logger.setLevel('DEBUG');
-  logger.debug('test-----');
+  const data = { req:
+   { user_id: '57453e35b27f275120d403ce',
+     publish_status: {
+       a: {
+         d: {
+           d: {
+             d: 'test'
+           }
+         }
+       }
+     },
+     page: 1,
+     limit: 10 },
+  params:
+   { user_id: '57453e35b27f275120d403ce',
+     publish_status: 1,
+     page: 1,
+     limit: 10 } };
+  logger.debug('test-----', JSON.stringify(data));
   t.truthy(true);
 });

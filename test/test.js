@@ -1,7 +1,8 @@
 import test from 'ava';
 import getLogger from './../lib/index';
+import rq from 'request';
 
-test('test', async t => {
+test.skip('test', async t => {
   const logger = getLogger('test', {
     layout: {
       type: 'basic'
@@ -29,4 +30,8 @@ test('test', async t => {
      limit: 10 } };
   logger.debug('test-----', JSON.stringify(data));
   t.truthy(true);
+});
+
+test('req', async t => {
+  
 });

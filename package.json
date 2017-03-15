@@ -4,7 +4,9 @@
   "description": "simple log framework for node.js",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "start": "(lsof -i :3000 | awk '{print $2}' | xargs -n2 | awk '{print $2}' | xargs kill -9) && babel-node ./test/express.js",
+    "dist": "babel lib -d dist"
   },
   "keywords": [
     "node",
@@ -26,12 +28,20 @@
     "babel-preset-stage-2": "^6.5.0",
     "babel-preset-stage-3": "^6.5.0",
     "babel-register": "^6.18.0",
+    "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
+    "cors": "^2.8.1",
     "eslint": "^2.9.0",
     "eslint-config-airbnb": "^9.0.0",
     "eslint-plugin-babel": "^3.2.0",
     "eslint-plugin-import": "^1.7.0",
     "eslint-plugin-jsx-a11y": "^1.2.0",
-    "eslint-plugin-react": "^5.0.1"
+    "eslint-plugin-react": "^5.0.1",
+    "express": "^4.15.2",
+    "morgan": "^1.8.1",
+    "request": "^2.81.0",
+    "request-id": "^0.11.1",
+    "request-promise": "^4.1.1"
   },
   "ava": {
     "babel": "inherit",

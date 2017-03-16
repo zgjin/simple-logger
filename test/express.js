@@ -21,7 +21,11 @@ app.use(Logger.simLogger('express-test', 'DEBUG'));
 
 app.get('/', (req, res, next) => {
   const logger = req.logger;
-  logger.debug('this is a test', 'get / logger');
+  logger.append({ params: { params: 'test' } });
+  logger.debug({ test: 'test' }, 'test logger debug');
+  logger.debug('testtset', 'test logger debug');
+
+  logger.error(new Error('test'), 'test logger error');
   return res.json({ code: 1, result: 'success' });
 });
 

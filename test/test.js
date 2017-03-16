@@ -1,11 +1,11 @@
 import test from 'ava';
-import getLogger from './../lib/index';
+import Logger from './../lib/index';
 import rq from 'request-promise';
 
-test.skip('test', async t => {
-  const logger = getLogger('test', {
+test('test', async t => {
+  const logger = Logger.getLogger('my-test', {
     layout: {
-      type: 'basic'
+      type: 'colored2'
     }
   });
   // logger.append({ requestId: 'requestId' });
@@ -28,11 +28,11 @@ test.skip('test', async t => {
      publish_status: 1,
      page: 1,
      limit: 10 } };
-  logger.debug('test-----', JSON.stringify(data));
+  logger.debug(data, 'test-----');
   t.truthy(true);
 });
 
-test('req', async t => {
+test.skip('req', async t => {
   const options = {
     method: 'GET',
     uri: 'http://localhost:3000'

@@ -14,6 +14,9 @@
   ],
   "author": "zhanggj",
   "license": "ISC",
+  "repository": {
+    "url": "https://github.com/fantasyKing/simple-logger.git"
+  },
   "devDependencies": {
     "ava": "^0.14.0",
     "babel-cli": "^6.6.5",

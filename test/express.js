@@ -22,7 +22,7 @@ app.use(Logger.simLogger('express-test', 'DEBUG'));
 app.get('/', (req, res, next) => {
   const logger = req.logger;
   logger.debug('this is a test', 'get / logger');
-  return res.end('hello world');
+  return res.json({ code: 1, result: 'success' });
 });
 
 app.all('*', (req, res, next) => {

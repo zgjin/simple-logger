@@ -1,6 +1,6 @@
 import test from 'ava';
 import getLogger from './../lib/index';
-import rq from 'request';
+import rq from 'request-promise';
 
 test.skip('test', async t => {
   const logger = getLogger('test', {
@@ -33,5 +33,16 @@ test.skip('test', async t => {
 });
 
 test('req', async t => {
-  
+  const options = {
+    method: 'GET',
+    uri: 'http://localhost:3000'
+  };
+  try {
+    const result = await rq(options);
+    console.log('result', result);
+    t.truthy(result);
+  } catch (err) {
+    console.log('err------>', err);
+    t.falsy(true);
+  }
 });

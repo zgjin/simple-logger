@@ -5,7 +5,7 @@ import rq from 'request-promise';
 test('test', async t => {
   const logger = Logger.getLogger('my-test', {
     layout: {
-      type: 'colored2'
+      type: 'globalColored'
     }
   });
   // logger.append({ requestId: 'requestId' });
@@ -28,7 +28,7 @@ test('test', async t => {
      publish_status: 1,
      page: 1,
      limit: 10 } };
-  logger.debug(data, 'test-----');
+  logger.debug({ requestId: 'requestId', params: { user_id: '57453e35b27f275120d403ce' }, data: 'this is log data' }, 'test-----');
   t.truthy(true);
 });
 

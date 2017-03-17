@@ -53,6 +53,46 @@ const Logger = rqeuire('simple-logger');
 
 ## Logger
 
-`Logger` is consist of `getLogger` and `simLogger`
+`Logger` consists of `getLogger` and `simLogger`
 
 ### getLogger
+
+```js
+const logger = Logger.getLogger(loggerCategoryName, options);
+```
+
+#### loggerCategoryName
+
+`loggerCategoryName` is the identifier of your log. Usually your project name.
+
+The log structure is :
+
+\[date\] \[level\] loggerCategoryName - \(trace method:line\) `your log data`
+
+#### options
+
+```js
+{
+  layout: {
+    type: "basic" // default is colored
+  }
+}
+```
+
+there four layout types you can choose :
+
+`basic`: just console.log();
+
+`colored`: different level has different color
+
+`basic2`
+
+`colored2`
+
+### simLogger
+
+```js
+app.use(Logger.simLogger('express-test', 'DEBUG', 'colored2'));
+
+const logger = req.logger;
+```

@@ -2,7 +2,7 @@ import test from 'ava';
 import Logger from './../lib/index';
 import rq from 'request-promise';
 
-test('test', async t => {
+test.skip('test', async t => {
   const logger = Logger.getLogger('my-test', {
     layout: {
       type: 'basic'
@@ -14,7 +14,7 @@ test('test', async t => {
   t.truthy(true);
 });
 
-test.skip('req', async t => {
+test('req', async t => {
   const options = {
     method: 'GET',
     uri: 'http://localhost:3000'

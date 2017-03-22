@@ -24,8 +24,10 @@ app.get('/', (req, res, next) => {
   logger.append({ params: { params: 'test' } });
   logger.debug({ test: 'test' }, 'test logger debug');
   logger.debug('testtset', 'test logger debug');
+  logger.debug('test logger debug');
 
   logger.error(new Error('test'), 'test logger error');
+  logger.error(new Error('test'));
   return res.json({ code: 1, result: 'success' });
 });
 

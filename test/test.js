@@ -2,19 +2,22 @@ import test from 'ava';
 import Logger from './../lib/index';
 import rq from 'request-promise';
 
-test.skip('test', async t => {
+test('test', async t => {
   const logger = Logger.getLogger('my-test', {
     layout: {
-      type: 'basic'
+      type: 'colored'
     }
   });
   // logger.append({ requestId: 'requestId' });
   logger.setLevel('DEBUG');
   logger.debug({ requestId: 'e4f203d9-42e0-452f-9671-b89fb2b60e73', params: { user_id: '57453e35b27f275120d403ce' }, data: 'this is log data' }, 'this is my test log');
+  logger.info('test', 'test');
+
+  logger.error(new Error('test'), 'test');
   t.truthy(true);
 });
 
-test('req', async t => {
+test.skip('req', async t => {
   const options = {
     method: 'GET',
     uri: 'http://localhost:3000'

@@ -79,7 +79,7 @@ The log structure is :
 }
 ```
 
-there four layout types you can choose :
+there six layout types you can choose :
 
 `basic`: just console.log();
 
@@ -88,6 +88,10 @@ there four layout types you can choose :
 `basic2`
 
 `colored2`
+
+`globalBasic`
+
+`globalColored`
 
 ### simLogger
 
